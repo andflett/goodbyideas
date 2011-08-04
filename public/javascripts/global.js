@@ -148,6 +148,8 @@ $(window).load(function(){
     controlNoticeView.delay(2000).slideUp(700,function(){
       if(!controlActionView.is(':visible')) controlView.hide();    
     });
+  } else if($('#home').length>0) {
+    $('.help_button').trigger('click');
   }
 
   /* Lazy loading */

@@ -27,8 +27,7 @@
 					    <li><%= link_to('Sign out', destroy_user_session_path, :class => 'button') %></li>
 					</ul>
     			<% else %>
-    				<p><%= link_to "Sign in", new_user_session_path, :remote => 'true' %>, or  <%= link_to "create an account", 
-new_user_registration_path, :remote => 'true' %> to donate your ideas</p>
+    				<p><%= link_to "Sign in", new_user_session_path, :remote => 'true' %>, or  <%= link_to "create an account", new_user_registration_path, :remote => 'true' %> to <%= link_to "donate", '/about', :remote => 'true', :class => 'help_button' %> your ideas</p>
     			<% end %>
     		</aside>
 	    </section>
@@ -50,8 +49,8 @@ new_user_registration_path, :remote => 'true' %> to donate your ideas</p>
     </section>
     
     <footer class="container">   
-            <p>All ideas belong to the crowd.</p>
-            <p>Please <a href="mailto:report@byideas.co.uk">report any offensive content</a>, or <a href="mailto:help@byideas.co.uk">contact us</a> for help. <a href="/rss">RSS</a></
+      <p>All ideas belong to the crowd.</p>
+      <p>Please <a href="mailto:report@byideas.co.uk">report any offensive content</a>, or <a href="mailto:help@byideas.co.uk">contact us</a> for help. <a href="/rss">RSS</a></
     </footer>
     
     <%- if "production" == RAILS_ENV -%>
