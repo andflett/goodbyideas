@@ -11,8 +11,8 @@ development:
   reconnect: false
   database: goodbyideas_development
   pool: 5
-  username: root
-  password: bt793fxp
+  username: ***
+  password: ***
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -24,8 +24,8 @@ test:
   reconnect: false
   database: goodbyideas_development
   pool: 5
-  username: root
-  password: bt793fxp
+  username: ***
+  password: ***
   socket: /tmp/mysql.sock
 
 production:
@@ -34,6 +34,6 @@ production:
   reconnect: false
   database: goodbyideas_development
   pool: 5
-  username: root
-  password: bt793fxp
+  username: ***
+  password: ***
   socket: /tmp/mysql.sock
