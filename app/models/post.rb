@@ -37,9 +37,9 @@ class Post < ActiveRecord::Base
     )
 
     if !self.user.append_twitter_handle or self.user.twitter_handle.nil?
-      @max_title_length = 90
+      @max_title_length = 80
     else 
-      @max_title_length = 85 - self.user.twitter_handle.length
+      @max_title_length = 75 - self.user.twitter_handle.length
     end
     
     @short_title = truncate(self.title,:length => @max_title_length)
@@ -47,9 +47,9 @@ class Post < ActiveRecord::Base
     page_url = bitly.shorten("http://byideas.co.uk/i#{self.id}",:history => 1)
     
     if self.user.append_twitter_handle and !self.user.twitter_handle.nil?
-      client.update("Idea: #{@short_title} #{page_url.shorten} v/@#{self.user.twitter_handle}")
+      client.update("#{@short_title} #{page_url.shorten} #ideasforafrica v/@#{self.user.twitter_handle}")
     else 
-      client.update("Idea: #{@short_title} #{page_url.shorten}")
+      client.update("#{@short_title} #{page_url.shorten} #ideasforafrica")
     end
     
     self.update_attribute(:published, true)

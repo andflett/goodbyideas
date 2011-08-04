@@ -29,7 +29,7 @@
 
 		header h1 { float: left; text-shadow: 0 1px 0px #000000; margin-bottom: 27px; }
 		header h1 a { color: #ffffff; }
-		header h1 a:hover, header h1 a:active, header h1 a:focus { text-decoration: none; text-shadow: 0px -1px 0 #000000; }
+		header h1 a:hover, header h1 a:active, header h1 a:focus { text-decoration: none; text-shadow: 0 0 5px rgba(255,255,255,0.5); }
 
 		header aside { 
 		  float: right; position: relative;
@@ -63,7 +63,7 @@
 			font-size: 12px; 
 	  }
 
-    header aside p.control span { color: #B03C3A; }
+    header aside p.control span { color: #17a0db; }
 
     /* =contol */
 
