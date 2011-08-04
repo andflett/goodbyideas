@@ -1,0 +1,22 @@
+var topLocation = false;
+
+<% @posts.each do |post| %>
+	<% 
+	  @post = post
+	  @type = 'list'
+	%>
+    $("#load_more").parent().before( "<%= escape_javascript( render( :partial => "idea" ) ) %>" );    
+    if(!topLocation) topLocation = $("#idea-<%= post.id %>").offset().top;
+<% end %>
+
+foldArticles();
+
+if(!scrolling) $('html:not(:animated),body:not(:animated)').animate({ scrollTop: topLocation-20 }, { duration:500 });
+pageBottom = $(document).height()-$(window).height()-$('footer:last').outerHeight()-100;
+scrolling = false;
+
+<% if @posts.next_page %>
+    $('#load_more').attr({href:"/posts?page=<%=@posts.next_page%>"});
+<% else %>
+    $('#load_more').parent().remove();
+<% end %>

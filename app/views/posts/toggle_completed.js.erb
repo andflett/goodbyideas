@@ -1,0 +1,6 @@
+$('#idea-progress li').removeClass('active');
+<% if @post.completed %>
+  $('#idea-progress .completed').addClass('active');
+<% else %>
+  $('#idea-progress .in-progress').addClass('active');
+<% end %>

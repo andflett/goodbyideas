@@ -1,0 +1,23 @@
+** Daemonized, any open files are closed.  Look at log/mongrel.pid and log/mongrel.log for info.
+** Starting Mongrel listening at 0.0.0.0:12002
+** Starting Rails with development environment...
+Rails Error: Unable to access log file. Please ensure that /home/byideas/rails_apps/madebyideas/log/development.log exists and is chmod 0666. The log level has been raised to WARN and the output directed to STDERR until the problem is fixed.
+/usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:239:in `require': no such file to load -- dispatcher (LoadError)
+	from /usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:239:in `require'
+	from /usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:225:in `load_dependency'
+	from /usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:596:in `new_constants_in'
+	from /usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:225:in `load_dependency'
+	from /usr/lib/ruby/gems/1.8/gems/activesupport-3.0.3/lib/active_support/dependencies.rb:239:in `require'
+	from /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/rails.rb:148:in `rails'
+	from /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:113:in `cloaker_'
+	from /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:149:in `call'
+	from /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:149:in `listener'
+	from /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:99:in `cloaker_'
+	from /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:50:in `call'
+	from /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/configurator.rb:50:in `initialize'
+	from /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:84:in `new'
+	from /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:84:in `run'
+	from /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/../lib/mongrel/command.rb:212:in `run'
+	from /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.5/bin/mongrel_rails:281
+	from /usr/bin/mongrel_rails:19:in `load'
+	from /usr/bin/mongrel_rails:19
