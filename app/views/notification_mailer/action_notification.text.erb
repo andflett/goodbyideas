@@ -9,7 +9,7 @@ Hi <%= @owner.username %>,
 
 "<%= @post.title %>"
 
-You can view the full idea at http://byideas.co.uk/i<%= @post.id %>
+You can view the full idea at http://good.good.byideas.co.uk/i<%= @post.id %>
 
 - Made by Ideas
 <% elsif @notification.action == 'create' and @notification.controller == 'comments' %>
@@ -23,7 +23,7 @@ Comment:
 
 "<%= @notification.value %>"
 
-You can view the full discussion at http://byideas.co.uk/i<%= @post.id %>
+You can view the full discussion at http://good.byideas.co.uk/i<%= @post.id %>
 
 - Made by Ideas
 <% elsif @notification.action == 'toggle_completed' and @notification.controller == 'posts' %>
@@ -33,7 +33,7 @@ Hi <%= @owner.username %>,
 
 "<%= @post.title %>"
 
-You can view the idea at http://byideas.co.uk/i<%= @post.id %>
+You can view the idea at http://good.byideas.co.uk/i<%= @post.id %>
 
 - Made by Ideas
 <% elsif @notification.controller == 'posts' and @notification.action == 'toggle_flagged' %>
@@ -41,7 +41,7 @@ You can view the idea at http://byideas.co.uk/i<%= @post.id %>
 
 "<%= @post.title %>"
 
-You can review and remove, or unflag, the idea here: http://byideas.co.uk/i<%= @post.id %>
+You can review and remove, or unflag, the idea here: http://good.byideas.co.uk/i<%= @post.id %>
 
 - Made by Ideas
 <% else %>
