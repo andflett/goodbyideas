@@ -47,9 +47,9 @@ class Post < ActiveRecord::Base
     page_url = bitly.shorten("http://byideas.co.uk/i#{self.id}",:history => 1)
     
     if self.user.append_twitter_handle and !self.user.twitter_handle.nil?
-      client.update("#{@short_title} #{page_url.shorten} #ideasforafrica v/@#{self.user.twitter_handle}")
+      client.update("#{@short_title} #{page_url.shorten} #famineaid v/@#{self.user.twitter_handle}")
     else 
-      client.update("#{@short_title} #{page_url.shorten} #ideasforafrica")
+      client.update("#{@short_title} #{page_url.shorten} #famineaid")
     end
     
     self.update_attribute(:published, true)
