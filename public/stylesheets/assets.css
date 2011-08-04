@@ -86,9 +86,6 @@
         rgb(74,150,224) 90%
       );
       background-color: #4083c4;
-      -webkit-box-shadow: 0px 1px 0px rgba(127,36,36,1);
-      -moz-box-shadow: 0px 1px 0px rgba(127,36,36,1);
-      box-shadow: 0px 1px 0px rgba(127,36,36,1);
     }
     
     .button:hover { text-decoration: none; }
@@ -309,19 +306,19 @@
   	-webkit-border-radius: 3px;
   	border: 1px solid rgba(1,1,1,0.2);
   	text-shadow: 0 1px 0 rgba(1,1,1,0.7);
-  	background-image: -webkit-gradient(
-            linear,
-            left top,
-            left bottom,
-            color-stop(0.86, rgb(186,39,37)),
-            color-stop(0.21, rgb(212,66,66))
-        );
-  	background-image: -moz-linear-gradient(
-  		    center bottom,
-  		    rgb(186,39,37) 21%,
-  		    rgb(212,66,66) 86%
-  	);
-  	background-color: #ca4c4d; 
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0.21, rgb(64,131,196)),
+        color-stop(0.90, rgb(74,150,224))
+    );
+    background-image: -moz-linear-gradient(
+      center bottom,
+      rgb(64,131,196) 21%,
+      rgb(74,150,224) 90%
+    );
+    background-color: #4083c4;
   }
 
   .toggler li.active a { color: #fff; text-shadow: 0 1px 0 rgba(1,1,1,0.7); }
