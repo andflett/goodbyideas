@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_filter :authenticate_user!, :only => [:new, :create, :edit, :update, :destroy, :rate, :claim, :toggle_flagged, :toggle_deleted, :starred, :favourite]
   before_filter :fetch_post, :only => [:edit, :update, :destroy]
   before_filter :authorise_as_owner, :only => [:edit, :update, :destroy]
-     
+  
   @@return_early = Proc.new do 
     render :json => {:status => 0, :message => "Error"}.to_json
     return false

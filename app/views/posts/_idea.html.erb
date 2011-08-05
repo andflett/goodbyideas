@@ -9,7 +9,7 @@
 		<% if current_user and @post.user.id == current_user.id %>
       	This is <%= link_to "your", "#{posts_path}/user/#{@post.user.id}", :title=> "View your profile" %> idea from <%= @post.updated_at.to_s(:article) %>
     	<% elsif current_user && @post.status == 'owned' && @post.owner_id == current_user.id %>
-		    Idea from <%= link_to @post.user.username, "#{posts_path}/user/#{@post.user.id}", :title=> "View #{@post.user.username}'s profile" %> on <%= @post.updated_at.to_s(:article) %>
+		    Idea from <%= link_to @post.user.display_username, "#{posts_path}/user/#{@post.user.id}", :title=> "View #{@post.user.display_username}'s profile" %> on <%= @post.updated_at.to_s(:article) %>
     	<% else %>
 		    Idea occurred on <%= @post.updated_at.to_s(:article) %>
 		  <% end %>
@@ -75,7 +75,7 @@
 				<% if @post.owner_id == current_user.id %>
 				  You've claimed this idea. You can <%= link_to "discuss it", "/posts/#{@post.id}" %> or <%= link_to "release it", "/posts/#{@post.id}/claim", :remote => "true" %> back to the crowd
 				<% else %>
-				  This idea has been claimed by <%= @owner.username %>
+				  This idea has been claimed by <%= @owner.display_username %>
 				<% end %>
 			<% else %>
 			  This idea is open, you can <%= link_to "discuss it", "/posts/#{@post.id}" %> or <%= link_to "claim it", "/posts/#{@post.id}/claim", :remote => "true" %> for yourself
@@ -84,7 +84,7 @@
 		<% else %>
 		<% if @post.status == 'owned' %>
 		<% @owner = User.find(@post.owner_id) %>
-		<p class="claim">This idea has been claimed by <%= @owner.username %></p>
+		<p class="claim">This idea has been claimed by <%= @owner.display_username %></p>
 		<% end %>
 		<p class="sign_in"><%= link_to "Sign in", new_user_session_path, :remote => 'true' %> to rate, claim or discuss this idea</p>
 		<% end %>

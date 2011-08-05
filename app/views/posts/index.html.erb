@@ -1,5 +1,5 @@
 <% if @user %>
-  <h2>A stream of consciousness from <%= @user.username%></h2>
+  <h2>A stream of consciousness from <%= @user.display_username%></h2>
   <% if @posts.count == 0 %>
   <p class="cta">Nothing here yet, luckily there are <%= link_to "many", root_path %> more ideas&hellip;</p>
   <% end %>

@@ -3,9 +3,13 @@ MadeByIdeas::Application.routes.draw do
   root :to => 'home#index'
   
   resources :comments
-  devise_for :users, :controllers => { :registrations => "registrations" } 
+  
   devise_for :user do
+      match '/user/sign_in/twitter' => Devise::Twitter::Rack::Signin
+      match '/user/connect/twitter' => Devise::Twitter::Rack::Connect
   end
+  
+  devise_for :users, :controllers => { :registrations => "registrations" }
 
   match "/posts/starred" => "posts#starred"
   resources :posts

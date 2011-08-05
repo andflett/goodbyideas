@@ -55,6 +55,11 @@
 	.cta_list li .cancel {
 	  line-height: 29px;
 	}
+	
+	.cta_list li.option {
+    line-height: 30px;
+    text-shadow: 1px 1px 0 #fff;
+	}
 
 /* =notice */
 

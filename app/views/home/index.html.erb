@@ -11,7 +11,7 @@
     unless @claimed.nil?
 %>
 <p id="claimed_id">You are working on an <%= link_to('idea', "#{posts_path}/#{@claimed.id}") %> from 
-    <%= link_to @claimed.user.username, "#{posts_path}/user/#{@claimed.user.id}" %></p>
+    <%= link_to @claimed.user.display_username, "#{posts_path}/user/#{@claimed.user.id}" %></p>
 <% end
 end %></section>
 

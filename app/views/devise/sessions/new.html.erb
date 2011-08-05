@@ -1,4 +1,8 @@
-<h2>You know the drill&hellip;</h2>
+<p>You can either sign in using your Made by Ideas account or your Twitter account.</p>
+<ul class="cta_list" style="padding-top:5px;">
+  <li><a href="/user/sign_in/twitter" class="button">Sign in with Twitter</a></li>
+</ul>
+<h2>Made by Ideas Users:</h2>
 <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
 
     <fieldset>
@@ -11,14 +15,14 @@
             <%= f.password_field :password, :autocomplete => 'off' %>
         </label>
         <% if devise_mapping.rememberable? -%>
-        <label class="checkbox"><%= f.check_box :remember_me %> <span>Don't log me out when I close my browser, thanks</span></label>
+        <label class="checkbox"><%= f.check_box :remember_me %> <span>Don't log me out when I close my browser</span></label>
         <% end %>
     </fieldset>
 
     <fieldset class="controls">
         <input type="hidden" id="next-url" name="next" value="<%= root_path %>" />
         <%= f.submit "Sign in", :class => 'button' %>
-        <p><%= link_to "Forgot your password?", new_password_path(resource_name) %></p>
+        <p><%= link_to "Want to register?", new_user_registration_path, :remote => 'true' %> / <%= link_to "Forgot your password?", new_password_path(resource_name) %></p>
     </fieldset>
 
 <% end %>

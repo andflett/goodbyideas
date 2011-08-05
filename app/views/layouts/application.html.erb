@@ -18,7 +18,7 @@
     		<h1><a href="/">Good by Ideas</a></h1>
     		<aside>
     			<% if user_signed_in? %>
-					<p class="control">What now, <span><%= current_user.username %></span>?</p>
+					<p class="control">What now, <span><%= current_user.display_username %></span>?</p>
 					<ul id="userControls">
 					    <li><%= link_to('New idea', new_post_path, :remote => 'true', :class => 'button') %></li>
 					    <li><%= link_to('My ideas', "#{posts_path}/user/#{current_user.id}", :class => 'button') %></li>
@@ -27,7 +27,7 @@
 					    <li><%= link_to('Sign out', destroy_user_session_path, :class => 'button') %></li>
 					</ul>
     			<% else %>
-    				<p><%= link_to "Sign in", new_user_session_path, :remote => 'true' %>, or  <%= link_to "create an account", new_user_registration_path, :remote => 'true' %> to <%= link_to "donate", '/about', :remote => 'true', :class => 'help_button' %> your ideas</p>
+    				<p><%= link_to "Start donating", new_user_session_path, :remote => 'true' %> your ideas, or <%= link_to "find out more", '/about', :remote => 'true', :class => 'help_button' %></p>
     			<% end %>
     		</aside>
 	    </section>

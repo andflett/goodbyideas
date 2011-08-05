@@ -1,10 +1,10 @@
 <% if @notification.action == 'claim' and @notification.controller == 'posts' %>
-Hi <%= @owner.username %>,
+Hi <%= @owner.display_username %>,
 
 <% if @notification.value == 'owned' %>
-<%= @action_by.username %> has decided to start work on the following idea:
+<%= @action_by.display_username %> has decided to start work on the following idea:
 <% else %>
-<%= @action_by.username %> has released and is no longer working on the following ideas:
+<%= @action_by.display_username %> has released and is no longer working on the following ideas:
 <% end %>
 
 "<%= @post.title %>"
@@ -13,9 +13,9 @@ You can view the full idea at http://good.good.byideas.co.uk/i<%= @post.id %>
 
 - Made by Ideas
 <% elsif @notification.action == 'create' and @notification.controller == 'comments' %>
-Hi <%= @owner.username %>,
+Hi <%= @owner.display_username %>,
 
-<%= @action_by.username %> has left a comment on the following idea:
+<%= @action_by.display_username %> has left a comment on the following idea:
 
 "<%= @post.title %>"
 
@@ -27,9 +27,9 @@ You can view the full discussion at http://good.byideas.co.uk/i<%= @post.id %>
 
 - Made by Ideas
 <% elsif @notification.action == 'toggle_completed' and @notification.controller == 'posts' %>
-Hi <%= @owner.username %>,
+Hi <%= @owner.display_username %>,
 
-<%= @action_by.username %> has <% if @notification.value == '1' %>completed the following idea:<% else %>has re-opened the following idea:<% end %>
+<%= @action_by.display_username %> has <% if @notification.value == '1' %>completed the following idea:<% else %>has re-opened the following idea:<% end %>
 
 "<%= @post.title %>"
 
@@ -37,7 +37,7 @@ You can view the idea at http://good.byideas.co.uk/i<%= @post.id %>
 
 - Made by Ideas
 <% elsif @notification.controller == 'posts' and @notification.action == 'toggle_flagged' %>
-<%=  @action_by.username %> has flagged the idea below as inappropriate:
+<%=  @action_by.display_username %> has flagged the idea below as inappropriate:
 
 "<%= @post.title %>"
 
@@ -45,7 +45,7 @@ You can review and remove, or unflag, the idea here: http://good.byideas.co.uk/i
 
 - Made by Ideas
 <% else %>
-Hi <%= @owner.username %>,
+Hi <%= @owner.display_username %>,
  
 We thought you should know that <%= @notification.user_id %> just changed
 <%= @notification.action %> to <%= @notification.value %> on a <%= @notification.controller %>.

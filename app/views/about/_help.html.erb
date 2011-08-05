@@ -1,11 +1,13 @@
 <section class="about">
 	<h2>What is this?</h2>
-	<p>East Africa needs help. We've got skills, you've got ideas &ndash; start donating your ideas to create money-raising digital projects.</p>
+	<p>East Africa needs help. We've got skills, you've got ideas &ndash; start donating your ideas to create money-raising digital projects or read more about the project at <a href="http://madebymany.com/blog/made-by-many-teams-up-with-good-for-nothing-to-support-the-east-africa-famine-crisis">Made by Many</a> or <a href="http://www.goodfornothing.co/2011/08/04/an-urgent-mission-east-africa-disaster-response/">Good for Nothing</a>.</p>
 	<h2>How do I donate?</h2>
 	<p>Start by creating an account, once you're registered you may either post ideas from this site, or by emailing <a href="mailto:good@byideas.co.uk">good@byideas.co.uk</a> from your registered email address; sum up your idea in the first 90 characters of your email's subject, you may give more detail in the email itself.</p>
-	<p>A few minutes after you post your idea, it will be Tweeted by <a href="http://twitter.com/#!/madebyideas">@madebyideas</a> for all to see, rank, and comment on. You'll be notified if someone claims your idea and starts work on it.</p>
+	<p>A few minutes after you post your idea, it will be Tweeted by <a href="http://twitter.com/#!/madebyideas">@madebyideas</a> for all to see,<br /> rate, and discus.</p>
 	<ul class="cta_list">
-	    <li><%= link_to "OK, create me an account", new_user_registration_path, :remote => 'true',:class => 'button' %></li>
-	    <li><%= link_to "Sign me in", new_user_session_path, :remote => 'true',:class => 'button' %></li>
+	    <li><%= link_to "Create an account", new_user_registration_path, :remote => 'true',:class => 'button' %></li>
+	    <li><%= link_to "Sign in", new_user_session_path, :remote => 'true',:class => 'button' %></li>
+	    <li class="option"><em>Or</em></li>
+	    <li><a href="/user/sign_in/twitter" class="button">Sign in with Twitter</a></li>
 	</ul>
 </section>

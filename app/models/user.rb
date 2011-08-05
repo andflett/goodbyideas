@@ -10,7 +10,7 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :token_authenticatable, :confirmable, :lockable and :timeoutable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :twitter_oauth
   
   attr_accessor :login
   
@@ -24,6 +24,15 @@ class User < ActiveRecord::Base
   has_many :comments, :dependent => :destroy, :foreign_key => "users_id"
 
   validates :username, :presence => true, :uniqueness => true
+  
+  def display_username
+    display_username = read_attribute(:username)
+    if display_username == nil then
+      display_username = '@' + read_attribute(:twitter_handle)
+    else 
+      display_username = read_attribute(:username)
+    end
+  end
   
   def password_required?
     new_record?
