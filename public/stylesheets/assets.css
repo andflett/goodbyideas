@@ -191,7 +191,8 @@
 			display: inline-block;
 			padding-right: 4px;
 			zoom: 1;
-      *display:inline;
+      *display: block; 
+      *float: left;
 		}
 		
 		.meta .actions { float: right; }

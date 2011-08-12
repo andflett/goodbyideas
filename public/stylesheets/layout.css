@@ -42,6 +42,7 @@
 			-moz-box-shadow: inset 0 -7px 7px rgba(70,70,70,0.1);
 			-webkit-box-shadow: inset 0 -7px 7px rgba(70,70,70,0.1);
 			box-shadow: inset 0 -7px 7px rgba(70,70,70,0.1);
+			overflow: hidden;
 	  }
 
 		header aside:hover { 
