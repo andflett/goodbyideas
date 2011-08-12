@@ -188,8 +188,10 @@
 		}
 		
 		.meta .icon { 
-			display: inline-block; 
+			display: inline-block;
 			padding-right: 4px;
+			zoom: 1;
+      *display:inline;
 		}
 		
 		.meta .actions { float: right; }

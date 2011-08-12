@@ -22,8 +22,15 @@ class User < ActiveRecord::Base
   has_many :favourites, :dependent => :destroy
   has_many :rated_posts, :through => :ratings, :source => :posts
   has_many :comments, :dependent => :destroy, :foreign_key => "users_id"
-
+  before_create :check_email_exists
+  
   validates :username, :presence => true, :uniqueness => true
+  
+  def check_email_exists
+    if self.email == '' then
+      self.email = '@' + self.twitter_handle
+    end
+  end
   
   def display_username
     display_username = read_attribute(:username)

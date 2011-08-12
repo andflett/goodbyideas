@@ -20,3 +20,7 @@ blockquote, q { quotes: none; }
 ins { text-decoration: none; }
 del { text-decoration: line-through; }
 table { border-collapse: collapse; border-spacing: 0px; }
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}

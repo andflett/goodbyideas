@@ -42,12 +42,12 @@ var topLocation = false;
     	%>
     	<% if params[:switch] %>
         	<% if @posts.next_page %>
-        	    $("#load_more").parent().before( "<%= escape_javascript( render( :partial => "posts/idea" ) ) %>" );
+        	    $("#load_more").parent().before(innerShiv("<%= escape_javascript( render( :partial => "posts/idea" ) ) %>" ));
         	<% else %>
-        	    $("#content .container").append( "<%= escape_javascript( render( :partial => "posts/idea" ) ) %>" ); 
+        	    $("#content .container").append(innerShiv("<%= escape_javascript( render( :partial => "posts/idea" ) ) %>" )); 
         	<% end %>
         <% else %>
-            $("#load_more").parent().before( "<%= escape_javascript( render( :partial => "posts/idea" ) ) %>" );
+            $("#load_more").parent().before(innerShiv("<%= escape_javascript( render( :partial => "posts/idea" ) ) %>"));
             if(!topLocation) topLocation = $("#idea-<%= post.id %>").offset().top; 
         <% end %>
 

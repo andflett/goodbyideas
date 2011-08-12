@@ -23,7 +23,7 @@ module MadeByIdeas
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
-    config.action_view.javascript_expansions[:defaults] = %w(libs/jquery libs/modernizr libs/rails)
+    config.action_view.javascript_expansions[:defaults] = %w(libs/modernizr libs/innershiv libs/jquery libs/rails)
     
     config.action_mailer.default_url_options = { :host => 'byideas.co.uk' }
 
